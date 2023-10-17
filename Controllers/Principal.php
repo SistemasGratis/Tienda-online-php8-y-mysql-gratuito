@@ -268,7 +268,9 @@ class Principal extends Controller
     //LOGIN
     public function login()
     {
-        $data['title'] = 'Login';
+        $data['title'] = 'Tu carrito';
+        $data['negocio'] = $this->model->getNegocio();
+        $data['categorias'] = $this->model->getCategorias();
         $this->views->getView('principal', "login", $data);
     }
 }
